@@ -37,7 +37,7 @@ const MOCK_COMPLAINTS = [
     citizenPhone: '+91 98765 43210',
     description: 'Massive garbage overflow blocking the road completely near Rohini market',
     address: 'Rohini Sector 8, Near Market',
-    imageUrl: 'https://images.unsplash.com/photo-1540910414948-c64042e93e25?w=400',
+    imageUrl: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=400',
     submittedAt: new Date(Date.now() - 1000 * 60 * 60 * 23),
   },
   {
@@ -46,7 +46,7 @@ const MOCK_COMPLAINTS = [
     citizenPhone: '+91 98765 43211',
     description: 'Foul smell coming from this area, garbage has been here for 2 days',
     address: 'Rohini Sector 8, Market Road',
-    imageUrl: 'https://images.unsplash.com/photo-1580910051075-595c7e5a8178?w=400',
+    imageUrl: 'https://images.unsplash.com/photo-1604187351574-c75ca79f5857?w=400',
     submittedAt: new Date(Date.now() - 1000 * 60 * 60 * 20),
   },
   {
@@ -55,7 +55,7 @@ const MOCK_COMPLAINTS = [
     citizenPhone: '+91 98765 43212',
     description: 'Drainage is blocked due to garbage, risk of water logging in rain',
     address: 'Rohini Sector 8, Block C',
-    imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400',
+    imageUrl: 'https://images.unsplash.com/photo-1515168915113-41c9706355c7?w=400',
     submittedAt: new Date(Date.now() - 1000 * 60 * 60 * 15),
   },
   {
@@ -64,7 +64,7 @@ const MOCK_COMPLAINTS = [
     citizenPhone: '+91 98765 43213',
     description: 'Children can\'t walk to school safely due to overflowing garbage',
     address: 'Rohini Sector 8, Near Primary School',
-    imageUrl: 'https://images.unsplash.com/photo-1494145904049-0dca59b4bbad?w=400',
+    imageUrl: 'https://images.unsplash.com/photo-1504198266287-1659872e6590?w=400',
     submittedAt: new Date(Date.now() - 1000 * 60 * 60 * 10),
   },
 ];
