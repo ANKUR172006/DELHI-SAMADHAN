@@ -1,49 +1,36 @@
-const timeline = [
-  {
-    status: "Complaint Submitted",
-    date: "19 Jun 2026",
-  },
-  {
-    status: "Assigned to Department",
-    date: "20 Jun 2026",
-  },
-  {
-    status: "Work Started",
-    date: "21 Jun 2026",
-  },
-  {
-    status: "Pending Verification",
-    date: "22 Jun 2026",
-  },
+const steps = [
+  "SUBMITTED",
+  "UNDER_REVIEW",
+  "ASSIGNED",
+  "IN_PROGRESS",
+  "RESOLVED",
 ];
 
-export default function ComplaintTimeline() {
+interface Props {
+  currentStatus?: string;
+}
+
+export default function ComplaintTimeline({ currentStatus = "SUBMITTED" }: Props) {
+  const matchedIndex = steps.findIndex((step) => step === currentStatus);
+  const currentIndex = matchedIndex >= 0 ? matchedIndex : 0;
+
   return (
-    <div className="bg-white rounded-xl border p-5">
-      <h3 className="font-semibold mb-4">
-        Complaint Timeline
-      </h3>
+    <div className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 className="mb-4 text-xl font-semibold text-slate-950">Timeline</h2>
 
       <div className="space-y-4">
-        {timeline.map((item, index) => (
-          <div
-            key={index}
-            className="flex gap-3"
-          >
-            <div className="w-3 h-3 rounded-full bg-blue-600 mt-1" />
-
-            <div>
-              <p className="font-medium">
-                {item.status}
-              </p>
-
-              <p className="text-sm text-gray-500">
-                {item.date}
-              </p>
-            </div>
+        {steps.map((step, index) => (
+          <div key={step} className="flex items-center gap-3">
+            <div
+              className={`h-4 w-4 rounded-full ${
+                index <= currentIndex ? "bg-blue-700" : "bg-slate-300"
+              }`}
+            />
+            <p className="text-sm font-medium text-slate-800">{step.replace("_", " ")}</p>
           </div>
         ))}
       </div>
     </div>
   );
 }
+
